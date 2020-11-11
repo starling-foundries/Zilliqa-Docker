@@ -6,8 +6,7 @@ const {fromBech32Address, getAddressFromPrivateKey} = require('@zilliqa-js/crypt
 const zilliqa = new Zilliqa('https://dev-api.zilliqa.com');
 
 
-async function main() {
-    var pkey= process.argv[2]
+async function main(pkey) {
     console.log("your pkey")
     console.log(`${pkey}`)
 
@@ -20,4 +19,4 @@ async function main() {
     console.log(`${address}`);
 
     }
-    main();
+module.exports = main;
